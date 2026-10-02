@@ -59,6 +59,24 @@
     }
   }
 
+  /* ---------- Frase motivadora (una al azar en cada visita) ---------- */
+
+  const QUOTES = [
+    "Cada día es un pequeño paso hacia sentirte mejor.",
+    "Descansa, respira y recuerda: vienen días más bonitos.",
+    "Tu recuperación también merece paciencia, calma y mucho cariño.",
+    "Poco a poco también se llega lejos.",
+    "Hoy no tienes que poder con todo, solo con lo de hoy.",
+    "Las flores también se toman su tiempo para florecer.",
+    "Ir despacio también es avanzar.",
+    "Mereces descanso, calma y todo el cariño del mundo.",
+  ];
+
+  function setupQuote() {
+    const quote = QUOTES[Math.floor(Math.random() * QUOTES.length)];
+    document.getElementById("quoteText").textContent = `“${quote}”`;
+  }
+
   /* ---------- Flores (SVG inline, colores sólidos) ---------- */
 
   const C = {
@@ -268,6 +286,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     const name = getNameFromPath();
     setupNameCard(name);
+    setupQuote();
 
     const button = document.getElementById("startExperience");
 
