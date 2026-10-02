@@ -1,0 +1,9 @@
+# Especificacion interna de desarrollo (no se publica)
+CLAUDE.md
+CLAUDE.MD
+
+# Configuracion local de Claude Code
+.claude/
+
+# Dependencias locales
+node_modules/
